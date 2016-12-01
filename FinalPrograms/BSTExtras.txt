@@ -1,0 +1,193 @@
+std::cout << "Working" << std::endl;
+  BinTreeNode* start = tree;
+  std::cout << "Working" << std::endl;
+  BinTreeNode* leftist = tree->left;
+  std::cout << "Working" << std::endl;
+  //std::cout << leftist->value << " ";
+  std::cout << "Working" << std::endl;
+	while (leftist->left != NULL)
+	{ 
+	  //std::cout << "Working" << std::endl;
+	  //std::cout << leftist->value << " ";
+		leftist = leftist->left;
+	}
+	
+	std::cout << "Working10" << std::endl;
+	std::cout << leftist->value << " ";
+	std::cout << "Working20" << std::endl;
+
+	while (leftist->value != tree->value)
+	{
+		if (leftist->right != NULL)
+		{
+		  leftist=leftist->right;
+			while (leftist->left != NULL)
+			{
+				leftist = leftist->left;
+			}
+			//leftist=leftist->right;
+			std::cout << leftist->value << " ";
+		  //leftist=leftist->right;
+			//std::cout << leftist->value << " ";
+		}
+		else if (leftist->left == NULL and leftist->right == NULL)
+		{
+		 // std::cout << leftist->value << " ";
+		  while(leftist->parent->left == NULL)
+		  {
+		    leftist = leftist->parent;
+		  }
+		  std::cout << leftist->parent->value << " ";
+		  leftist = leftist->parent->right;
+		  // if (leftist->parent->left == NULL)
+		  // {
+		  //   leftist = leftist->parent->parent;
+		  // }
+		  // else
+		  // {
+		  //   leftist = leftist->parent;
+		  // }
+		  //std::cout << leftist->value << " ";
+		  std::cout << "Working30" << std::endl;
+		  
+		}
+		else
+		{
+		  leftist = leftist->parent;
+		  std::cout << leftist->value << " ";
+		}
+	}
+		
+
+	std::cout << tree->value << " ";
+
+	start = tree->right;
+
+	while (leftist->left != NULL)
+	{
+		leftist = leftist->left;
+	}
+	
+	//std::cout << leftist->value << " ";
+
+	while (leftist->value != tree->value)
+	{
+		if (leftist->right != NULL)
+		{
+		  leftist=leftist->right;
+			while (leftist->left != NULL)
+			{
+				leftist = leftist->left;
+			}
+			std::cout << leftist->value << " ";
+			//std::cout << leftist->value << " ";
+		}
+		else
+		{
+		  leftist = leftist->parent;
+		  //std::cout << leftist->value << " ";
+		} 
+	}
+  //std::cout << tree->value << std::endl;
+  //if(tree->right!=NULL)
+    //in_order(tree->right); 
+    
+      std::cout << "Working"; 
+  BinTreeNode* current = tree;
+  std::vector<BinTreeNode*> s;
+  s.push_back(current);
+  bool left = false;
+  bool right = false;
+  std::cout << "Working"; 
+  while(left == false and right == false)
+  {
+   while(current->left != NULL)
+   {
+     current = current->left;
+   }
+   left = current->logged;
+   //std::cout<<"Working 40";
+   current = tree;
+   while(current->right != NULL)
+   {
+     current = current->right;
+   }
+   right = current->logged;
+   
+   current = tree;
+   
+   if(current->left!=NULL)
+   {
+     //std::cout << "Working 50"; 
+     current = current->left;
+     }
+   else
+    {
+      
+       std::cout << current->value;
+       current->logged = true;
+       //s[s.size()-1] = NULL;
+       //s.resize(s.size()-1);
+       current = current->right;
+     }
+  //   else if(current->left == NULL)
+  //   {      
+  //     std::cout << "Working"; 
+  //     std::cout << s[s.size()-1]->value;
+  //   }
+  //   if(current->right!=NULL)
+  //   {
+  //     current = current->right;
+  //     s[s.size()-1] = current;
+  //   }
+  //   else if(current->right == NULL)
+  //   {
+  //   std::cout << s[s.size()-2]->value;
+  //   int count = 3;
+  //   while(s[s.size()-2]->right == NULL)
+  //   {
+  //     current = s[s.size()-count]->right;
+  //     count+=1;
+  //   }
+  //   } 
+  }
+  
+    while(true)
+  {
+    while(current->left!=NULL)
+    {
+      std::cout << "Working 50"; 
+      s.push(current->value);
+      current = current->left;
+    }
+    std::cout << s.top();
+    s.pop();
+    if(current->right != NULL)
+    {
+      std::cout << "Working 60"; 
+      current = current->right;
+      s.push(current->value);
+    }
+    else
+    {
+      if(s.empty())
+      {
+        break;
+      }
+      else
+      {
+        while(current->value != s.top())
+        {
+          current = current->parent;
+        }
+        while(current->right == NULL)
+        {
+          current = current->parent;
+          s.pop();
+        }
+        current = current->right;
+        s.push(current->value);
+      }
+    }
+    
+  }
