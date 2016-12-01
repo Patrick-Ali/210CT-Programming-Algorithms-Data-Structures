@@ -142,8 +142,7 @@ private:
       
     }
  
-public:
-  // Atributes 
+public: 
     List()
     {
       /* Initialise the list with head and tail as 0 as there is no values in the list yet*/
