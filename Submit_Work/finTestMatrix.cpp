@@ -224,15 +224,43 @@ int main()
     int numberOfColumnsM2 = matrix2[0].size();
     
     int scalar = 2;
+        
+    bool mult = false;
+    bool addSub = false;
     
     matrix_t matrix3;
     
-    matrix_t matrixHolder1 = multMatrix(matrix1,matrix2,matrix3,numberOfRowsM1,numberOfColumnsM1,0);
-    matrix_t matrixHolder2 = addMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1);
-    matrix_t matrixHolder3 = scalarMultMatrix(matrixHolder2,scalar,numberOfRowsM1,numberOfColumnsM1);
+    matrix_t matrixHolder1;
     
-    matrix3 = subMatrix(matrixHolder1,matrixHolder3,numberOfRowsM1,numberOfColumnsM1);
-    print(matrix3, numberOfRowsM1, numberOfColumnsM1);
+    matrix_t matrixHolder2;
+    
+    if(numberOfColumnsM1 > numberOfRowsM2 or numberOfRowsM2 > numberOfColumnsM1)
+    {
+        std::cout << "Matrix multipication can't happen as the matracies are diffrent sizes" << std::endl;
+    }
+    else
+    {
+      matrixHolder1 = multMatrix(matrix1,matrix2,matrix3,numberOfRowsM2,numberOfColumnsM1,0);
+      mult = true;
+    }
+    
+    if(numberOfRowsM1 != numberOfRowsM2 || numberOfColumnsM1 != numberOfColumnsM2)
+    {
+        std::cout<<"Matrix addition and subtraction can't happen as the matracies are diffrent sizes" << std::endl;
+    }
+    else
+    {
+        matrixHolder2 = addMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1);
+        addSub = true;
+    }
+    
+    if(addSub == true and mult == true)
+    {
+        matrix_t matrixHolder3 = scalarMultMatrix(matrixHolder2,scalar,numberOfRowsM1,numberOfColumnsM1);
+        
+        matrix3 = subMatrix(matrixHolder1,matrixHolder3,numberOfRowsM1,numberOfColumnsM1);
+        print(matrix3, numberOfRowsM1, numberOfColumnsM1);
+    }
     
     return 0;
 }
