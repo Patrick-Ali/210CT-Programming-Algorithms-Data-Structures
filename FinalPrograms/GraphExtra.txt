@@ -1,0 +1,8 @@
+  	  Vertex* current = nodeList[0];
+  	  for(int i = nodeList.size(); i>-1; i--)
+  	  {
+  	  	Vertex* hold = nodeList[i];
+  	  	Edge* node = new Edge(temp);
+  	  }
+  	  
+  	  (values[0]+values.size()-1)/2

@@ -1,0 +1,77 @@
+int** mulMatrix(const int matrix1[3][3], const int matrix2[3][3])
+{
+
+    // Creaate a pointer that will point to an array of pointers
+    int **matrix3 = nullptr;
+    // Set an array of 3 integer pointers, so each will point to a row in the matrix
+    matrix3 = new int*[3];
+    int hold = 0;
+    int count = 0;
+    
+    for(int i = 0; i < 3; i++)
+    {
+        // create an array of size three i.e. 3 columns that will be pointed at by an array at by the pointer indicated by the array 
+        matrix3[i] = new int[3];
+
+        //fill out the row with relevant data
+        for(int ii = 0; ii < 3; ii++)
+        {
+
+            int calc = matrix1[i][ii] * matrix2[ii][i];
+            hold += calc;
+            //std::cout <<  "Hold "<< matrix1[i][ii] + matrix2[i][ii] <<  std::endl;
+            //std::cout << matrix1[i][ii] << " " << matrix2[i][ii] << " " << matrix3[i][ii] <<'\n';
+            matrix3[i][ii] = hold;
+            
+        }
+        
+        count++;
+    }
+    
+    //int *matrixptr = &matrix3
+    
+    //return the pointer to the array of pointers thus a pointer to a pointer 
+    return matrix3;
+}
+
+std::vector<std::vector<int>>
+
+      {123,234,345},
+      {456,567,678},
+      {789,8910,91011}
+
+ // std::vector<std::vector<int>> scalarAdd = scalarAddMatrix(matrix1,scalar,numberOfRowsM1,numberOfColumnsM1);
+    
+    // print(scalarAdd, numberOfRowsM1, numberOfColumnsM1);
+    
+    // std::vector<std::vector<int>> scalarSub = scalarSubMatrix(matrix1,scalar,numberOfRowsM1,numberOfColumnsM1);
+    
+    // print(scalarSub, numberOfRowsM1, numberOfColumnsM1);
+    
+    // std::vector<std::vector<int>> scalarMult = scalarMultMatrix(matrix1,scalar,numberOfRowsM1,numberOfColumnsM1);
+    
+    // print(scalarMult, numberOfRowsM1, numberOfColumnsM1);
+    
+    // std::vector<std::vector<int>> add = addMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1);
+    
+    // int numberOfRows = add.size();
+    // int numberOfColumns = add[0].size();
+    
+    // print(add, numberOfRows, numberOfColumns);
+    
+    // std::vector<std::vector<int>> sub = subMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1);
+    
+    // numberOfRows = sub.size();
+    // numberOfColumns = sub[0].size();
+    
+    // print(add, numberOfRows, numberOfColumns);
+    
+    // std::vector<std::vector<int>> mult = multMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1);
+    
+    // numberOfRows = mult.size();
+    // numberOfColumns = mult[0].size();
+    
+    // print(mult, numberOfRows, numberOfColumns);
+    
+    std::vector<std::vector<int>> matrix3 = subMatrix(multMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1),scalarMultMatrix(addMatrix(matrix1,matrix2,numberOfRowsM1,numberOfColumnsM1),scalar,numberOfRowsM1,numberOfColumnsM1),numberOfRowsM1,numberOfColumnsM1);
+    print(matrix3, numberOfRowsM1, numberOfColumnsM1);

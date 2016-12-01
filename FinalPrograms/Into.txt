@@ -1,0 +1,52 @@
+The link to all code used in this report can be found here:
+https://github.com/Patrick-Ali/210CT-Programming-Algorithms-Data-Structures 
+
+It is important to note that in terms of version control that there are old versions of the code on at the link
+that were used as my version of version control. In additon to using this site I also used the Cloud 9 as my primary
+development enviorment. This can be found here:
+https://ide.c9.io/patrick_ali/ct-210
+
+The following report is writen in C++11 with pusedo code provided for the reelevant parts of each question.
+As reproducing the psedou code for the user input and out put will become redundant so I will focus on producing it 
+for the main functions of the program. 
+
+Inital problems will have Big O notation included so as to demonstrate the worst case runtime of the program. Much
+like the psedo code I will not be giving Big O notation for the input and output for evey prgram as it will not change
+majorly program to program.
+
+As such the following report will be layed out as such:
+Psedou Code
+Problem  Solved in C++11
+Big O notation for inital few 
+
+In regards to the psedou code it has been formated through the Latex Algorithms package
+meaning that the comments will be denoted by a hollow arrow head rather than the '\\' which 
+may be used else where. 
+
+
+To note the following standard template libary objects will be used where aplicable 
+Vector
+Stack
+Que 
+
+As such I will be using the follwing website to determine their Big O notation where applicable:
+http://www.cs.northwestern.edu/~riesbeck/programming/c++/stl-summary.html 
+
+So as to give you a fell for the way the document will be laid out I will produce the psedocode and Big O notation for
+the general input and output for each program.
+
+Input:
+
+Output:
+
+Where I fell I may have been influenced by a particualr piece of code, either pusedo or real it will be shown
+in the section and in the references:
+http://www.learncpp.com/cpp-tutorial/59-random-number-generation/ - Random Number Generator
+http://www.purplemath.com/modules/factzero.htm - Trailing Zero
+https://www.khanacademy.org/math/algebra-home/alg-matrices/alg-multiplying-matrices-by-scalars/v/scalar-multiplication
+https://www.khanacademy.org/math/algebra-home/alg-matrices/alg-adding-and-subtracting-matrices/v/matrix-addition-and-subtraction-1
+https://www.khanacademy.org/math/precalculus/precalc-matrices/multiplying-matrices-by-matrices/v/multiplying-a-matrix-by-a-matrix
+https://www.tutorialspoint.com/data_structures_algorithms/bubble_sort_algorithm.htm - Bubble Sort
+https://www.youtube.com/playlist?list=PLTxllHdfUq4d-DE16EDkpeb8Z68DU7Z_Q - Binary Tree
+http://pastebin.com/MzDCFyD2 Linked List (Given)
+http://pastebin.com/8gtdjSVD Binary Tree (Given)

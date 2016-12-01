@@ -1,0 +1,18 @@
+Input:
+Shuffle has an input of an array of integers 
+trailingZero has an input of an integer
+
+Output
+Shuffle outputs a shuffled version of the given array
+TrailingZero outputs an integer that indicates the number of trailing zeros the 
+number has when factorised
+
+Gaurante Termination 
+Shuffle will terminate as once the array has been shuffled with in the range 
+10-20 it will output the array
+TrailingZero will terminate once the given number being divided by 5^n reaches 
+zero and then it will output the answer
+
+can i give the code to someone and they understand it
+
+i have tested x number of times and it produces correct number of results and thus it will likely do it for all
